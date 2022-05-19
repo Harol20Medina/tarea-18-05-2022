@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+
+
+.grid-container>* {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.header {
+    grid-area: header;
+    background-color: #f2ff00;
+}
+.navbar {
+    grid-area: navbar;
+    background-color: #20d120;
+}
+.Aside {
+    grid-area: Aside;
+    background-color: #fb3131;
+}
+.section {
+    grid-area: section;
+    background-color: #2331f0;
+}
+.parte1 {
+    background-color: #00a6ff;
+    padding: 40px;
+    margin: 20px;
+}
+.parte2 {
+    background-color: #00a6ff;
+    padding: 40px;
+    margin: 20px;
+}   
+.parte3 {
+    background-color: #00a6ff;
+    padding: 40px;
+    margin: 20px;
+}
+.footer {
+    grid-area: footer;
+    background-color: #8400ff;
+}
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "header" 100px
+        "navbar" 50px
+        "Aside" 100px
+        "section" 100px
+        "footer"100px; 
+}
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template:
+            "header header" 100px
+            "navbar navbar" 100px
+            "section Aside" 200px
+            "section Aside" 200px
+            "footer footer" 100px /
+            auto    200px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .grid-container {
+    grid-template:
+    "header header" 100px
+    "navbar navbar" 100px
+    "section Aside" 200px
+    "section Aside" 200px
+    "footer footer" 100px /
+    auto    500px;
+    }
+}
+
+@media (min-width: 800px) {
+    .grid-container {
+    grid-template:
+    "header header" 100px
+    "navbar navbar" 100px
+    "section Aside" 200px
+    "section Aside" 200px
+    "footer footer" 100px /
+    800px    auto;
+    }
+}
